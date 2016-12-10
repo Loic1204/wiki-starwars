@@ -32,11 +32,11 @@ module Persos
       #TODO: creation du fichier + ajout d'entete XML
       <<-EOS
       <personnage>
-      <nom>#{@nom}</nom>
-      <planete>#{@planete}</planete>
-      <espece>#{@espece}</espece>
-      <poste>#{@poste}</poste>
-      <affiliation>#{@affiliation}</affiliation>
+      	<nom>#{@nom}</nom>
+      	<planete>#{@planete}</planete>
+      	<espece>#{@espece}</espece>
+      	<poste>#{@poste}</poste>
+      	<affiliation>#{@affiliation}</affiliation>
 #{armes}
 #{vehicules}
       </personnage>

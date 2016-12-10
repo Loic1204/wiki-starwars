@@ -13,9 +13,9 @@ module Persos
 
       <<-EOS
       <vehicule>
-      <nom>#{@nom}</nom>
-      <classe>#{@classe}</classe>
-      <portee>#{@portee}</portee>
+      	<nom>#{@nom}</nom>
+      	<classe>#{@classe}</classe>
+      	<portee>#{@portee}</portee>
 #{armes}
       </vehicule>
       EOS

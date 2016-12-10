@@ -11,9 +11,9 @@ module Persos
     def to_s
       <<-EOS
       <arme>
-      <nom>#{@nom}</nom>
-      <quantite>#{@quantite}</quantite>
-      <portee>#{@portee}</portee>
+      	<nom>#{@nom}</nom>
+      	<quantite>#{@quantite}</quantite>
+     	<portee>#{@portee}</portee>
       </arme>
       EOS
     end

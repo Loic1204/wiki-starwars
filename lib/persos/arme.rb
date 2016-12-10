@@ -1,4 +1,4 @@
-module Perso
+module Persos
   class Arme
     attr_reader :nom
     attr_reader :quantite

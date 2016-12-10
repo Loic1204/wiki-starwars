@@ -1,4 +1,4 @@
-module Perso
+module Persos
   class Vehicule
     attr_reader :nom, :classe, :armes
 
@@ -16,7 +16,7 @@ module Perso
       <nom>#{@nom}</nom>
       <classe>#{@classe}</classe>
       <portee>#{@portee}</portee>
-      #{armes}
+#{armes}
       </vehicule>
       EOS
     end

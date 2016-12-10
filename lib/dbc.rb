@@ -1,8 +1,3 @@
-###
-# Tiré du DSL 'recettes' de Guy Tremblay
-###
-
-
 ############################################################
 # Support pour l'approche DBC... tres informel et "light"!
 #

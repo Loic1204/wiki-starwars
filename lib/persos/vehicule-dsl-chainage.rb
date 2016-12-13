@@ -17,11 +17,8 @@ module Persos
       self
     end
 
-    def arme_vehicule( nom, quantite, portee )
-      @armes << Arme.nom( nom ).
-        quantite( quantite ).
-        portee( portee ).
-        fin
+    def arme_vehicule( arme )
+      @armes << arme
 
       self
     end

@@ -11,16 +11,31 @@ rey =
     poste( "pilleuse" ).
     espece( "humaine" ).
 
-    arme( "pistolet blaster", 1, "corps à corps" ).
+    arme( Arme.nom( "pistolet blaster" ).
+      quantite( 1 ).
+      portee( "corps à corps" ).
+      fin).
 
-    et( "sabre laser", 1, "corps à corps" ).
+    vehicule( Vehicule.nom( "motojet modifie" ).
+      classe( "motojet" ).
+      arme_vehicule( Arme.nom( "big gun" ).
+        quantite( 2 ).
+        portee( "far" ).
+        fin).
+      fin).
 
-    vehicule( "motojet modifie", "motojet" ).
-    arme_vehicule( "big gun", 2, "far" ).
+    vehicule( Vehicule.nom( "trotinette" ).
+      classe( "2 roues" ).
+      arme_vehicule( Arme.nom( "smol gun" ).
+        quantite( 1 ).
+        portee( "not far" ).
+        fin).
+      fin).
 
-    vehicule( "trotinette", "2 roues" ).
-    arme_vehicule( "smol gun", 1, "not far" ).
-
+    et( Arme.nom( "sabre laser" ).
+      quantite( 1 ).
+      portee( "corps à corps" ).
+      fin).
     fin
 
 if __FILE__ == $0

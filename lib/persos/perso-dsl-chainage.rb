@@ -37,7 +37,10 @@ module Persos
     end
 
     def arme( nom, quantite, portee )
-      @armes << Arme.new( nom, quantite, portee )
+      @armes << Arme.nom( nom ).
+        quantite( quantite ).
+        portee( portee ).
+        fin
 
       self
     end
@@ -52,7 +55,10 @@ module Persos
     end
 
     def arme_vehicule( nom, quantite, portee )
-      @vehicules[$numero_vehicule].armes << Arme.new( nom, quantite, portee ) unless $numero_vehicule < 0
+      @vehicules[$numero_vehicule].armes << Arme.nom( nom ).
+        quantite( quantite ).
+        portee( portee ).
+        fin unless $numero_vehicule < 0
 
       self
     end

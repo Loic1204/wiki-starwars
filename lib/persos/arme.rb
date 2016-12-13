@@ -6,9 +6,17 @@ module Persos
 
     def initialize( nom, quantite, portee )
       @nom, @quantite, @portee = nom, quantite, portee
+
+      @complete = complete?
+    end
+
+    def complete?
+      @complete ||= @quantite && @portee
     end
 
     def to_s
+      DBC.require( complete?, "*** Arme a completer, il reste des champs vides " + inspect )
+
       <<-EOS
       <arme>
       	<nom>#{@nom}</nom>

@@ -1,3 +1,7 @@
+###
+# Basé sur spec-helper.rb du DSL Recettes
+###
+
 ############################################################
 # Support pour l'approche DBC... tres informel et "light"!
 #

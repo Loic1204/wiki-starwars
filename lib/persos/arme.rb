@@ -18,11 +18,11 @@ module Persos
       DBC.require( complete?, "*** Arme a completer, il reste des champs vides " + inspect )
 
       <<-EOS
-      <arme>
-      	<nom>#{@nom}</nom>
-      	<quantite>#{@quantite}</quantite>
-     	<portee>#{@portee}</portee>
-      </arme>
+        <arme>
+          <nom>#{@nom}</nom>
+          <quantite>#{@quantite}</quantite>
+          <portee>#{@portee}</portee>
+        </arme>
       EOS
     end
   end

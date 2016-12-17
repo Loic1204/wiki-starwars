@@ -29,14 +29,13 @@ module Persos
       armes = @armes.map { |a| a.to_s }.join("\n")
       vehicules = @vehicules.map { |v| v.to_s }.join("\n")
 
-      #TODO: creation du fichier + ajout d'entete XML
       <<-EOS
       <personnage>
-      	<nom>#{@nom}</nom>
-      	<planete>#{@planete}</planete>
-      	<espece>#{@espece}</espece>
-      	<poste>#{@poste}</poste>
-      	<affiliation>#{@affiliation}</affiliation>
+        <nom>#{@nom}</nom>
+        <planete>#{@planete}</planete>
+        <espece>#{@espece}</espece>
+        <poste>#{@poste}</poste>
+        <affiliation>#{@affiliation}</affiliation>
 #{armes}
 #{vehicules}
       </personnage>

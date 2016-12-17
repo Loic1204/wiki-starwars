@@ -20,12 +20,11 @@ module Persos
       armes = @armes.map { |a| a.to_s }.join("\n")
 
       <<-EOS
-      <vehicule>
-      	<nom>#{@nom}</nom>
-      	<classe>#{@classe}</classe>
-      	<portee>#{@portee}</portee>
+        <vehicule>
+          <nom>#{@nom}</nom>
+          <classe>#{@classe}</classe>
 #{armes}
-      </vehicule>
+        </vehicule>
       EOS
     end
   end

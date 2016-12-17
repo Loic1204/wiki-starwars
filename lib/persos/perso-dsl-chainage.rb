@@ -7,7 +7,6 @@ module Persos
 
     def self.nom( nom )
       perso = Perso.new( nom, nil, nil, nil, nil, [], [] )
-      $numero_vehicule = -1
 
       perso
     end
@@ -36,29 +35,19 @@ module Persos
       self
     end
 
-    def arme( nom, quantite, portee )
-      @armes << Arme.new( nom, quantite, portee )
+    def arme( arme )
+      @armes << arme
 
       self
     end
 
     alias :et :arme
 
-    def vehicule( nom, classe )
-      @vehicules << Vehicule.new( nom, classe, [] )
-      $numero_vehicule += 1
+    def vehicule( vehicule )
+      @vehicules << vehicule
 
       self
     end
-
-    def arme_vehicule( nom, quantite, portee )
-      @vehicules[$numero_vehicule].armes << Arme.new( nom, quantite, portee ) unless $numero_vehicule < 0
-
-      self
-    end
-
-    alias :avec :arme_vehicule
-    alias :arme_de :arme_vehicule
 
     def fin
       DBC.assert complete?

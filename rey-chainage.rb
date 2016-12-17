@@ -10,12 +10,32 @@ rey =
     affiliation( "résistance" ).
     poste( "pilleuse" ).
     espece( "humaine" ).
-    arme( "pistolet blaster", 1, "corps à corps" ).
-    et( "sabre laser", 1, "corps à corps" ).
-    vehicule( "motojet modifie", "motojet" ).
-    arme_vehicule( "big gun", 2, "far" ).
-    vehicule( "trotinette", "2 roues" ).
-    arme_vehicule( "smol gun", 1, "not far" ).
+
+    arme( Arme.nom( "pistolet blaster" ).
+      quantite( 1 ).
+      portee( "corps à corps" ).
+      fin).
+
+    vehicule( Vehicule.nom( "motojet modifie" ).
+      classe( "motojet" ).
+      arme_vehicule( Arme.nom( "big gun" ).
+        quantite( 2 ).
+        portee( "far" ).
+        fin).
+      fin).
+
+    vehicule( Vehicule.nom( "trotinette" ).
+      classe( "2 roues" ).
+      arme_vehicule( Arme.nom( "smol gun" ).
+        quantite( 1 ).
+        portee( "not far" ).
+        fin).
+      fin).
+
+    et( Arme.nom( "sabre laser" ).
+      quantite( 1 ).
+      portee( "corps à corps" ).
+      fin).
     fin
 
 if __FILE__ == $0

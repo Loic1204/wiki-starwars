@@ -6,9 +6,17 @@ module Persos
       @nom = nom
       @classe = classe
       @armes = armes
+
+      @complete = complete?
+    end
+
+    def complete?
+      @classe
     end
 
     def to_s
+      DBC.require( complete?, "*** Vehicule a completer, il reste des champs vides " + inspect )
+
       armes = @armes.map { |a| a.to_s }.join("\n")
 
       <<-EOS

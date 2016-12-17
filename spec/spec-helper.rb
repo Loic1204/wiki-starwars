@@ -1,3 +1,7 @@
+###
+# Basé sur spec-helper.rb du DSL Recettes
+###
+
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/spec'

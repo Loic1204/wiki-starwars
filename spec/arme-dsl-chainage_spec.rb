@@ -51,6 +51,14 @@ module Persos
                 .fin
         a.to_s.must_equal @attendu
       end
+
+      it "genere une exception si la finalisation n'est pas faite" do
+        a = Arme.nom( "Colt 1855 Sidehammer" )
+                .quantite( 1 )
+                .portee( "25 yards" )
+
+        lambda { a.to_s }.must_raise DBC::Failure
+      end
     end
   end
 end

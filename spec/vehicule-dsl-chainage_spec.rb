@@ -65,6 +65,17 @@ module Persos
 
         v.to_s.must_equal @attendu
       end
+
+      it "genere une exception si la finalisation n'est pas faite" do
+        v = Vehicule.nom( "Motojet 74-Z" )
+                    .classe( "Motojet")
+                    .arme_vehicule(Arme.nom( "canon laser leger" )
+                                       .quantite(1)
+                                       .portee( "50 yards" )
+                                       .fin)
+
+        lambda { v.to_s }.must_raise DBC::Failure
+      end
     end
   end
 end

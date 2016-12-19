@@ -191,6 +191,27 @@ module Persos
 
         p.to_s.must_equal @attendu
       end
+
+      it "genere une exception si la finalisation n'est pas faite" do
+        p = Perso.nom( "Luke Skywalker" )
+                 .planete( "Tatooine" )
+                 .espece( "humain" )
+                 .poste( "Jedi" )
+                 .affiliation( "resistance" )
+                 .arme(Arme.nom( "sabre laser" )
+                           .quantite(1)
+                           .portee( "corps a corps" )
+                           .fin)
+                 .vehicule(Vehicule.nom( "Motojet 74-Z" )
+                                   .classe( "Motojet" )
+                                   .arme_vehicule(Arme.nom( "canon laser leger" )
+                                                      .quantite(1)
+                                                      .portee( "50 yards" )
+                                                      .fin)
+                                 .fin)
+
+        lambda { p.to_s }.must_raise DBC::Failure
+      end
     end
   end
 end

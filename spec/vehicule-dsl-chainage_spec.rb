@@ -68,7 +68,6 @@ module Persos
 
       it "genere une exception si la finalisation n'est pas faite" do
         v = Vehicule.nom( "Motojet 74-Z" )
-                    .classe( "Motojet")
                     .arme_vehicule(Arme.nom( "canon laser leger" )
                                        .quantite(1)
                                        .portee( "50 yards" )

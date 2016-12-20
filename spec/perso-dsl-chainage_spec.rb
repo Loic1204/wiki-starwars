@@ -195,7 +195,6 @@ module Persos
       it "genere une exception si la finalisation n'est pas faite" do
         p = Perso.nom( "Luke Skywalker" )
                  .planete( "Tatooine" )
-                 .espece( "humain" )
                  .poste( "Jedi" )
                  .affiliation( "resistance" )
                  .arme(Arme.nom( "sabre laser" )
